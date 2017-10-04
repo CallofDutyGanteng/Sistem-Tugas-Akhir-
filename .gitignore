@@ -1,1 +1,11 @@
 # Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.htaccess
+.htrouter.php
+.idea/
+.phalcon/
+app/
+cache/
+index.html
+public/
+sql/
