@@ -6,6 +6,8 @@ class PenggunaController extends \Phalcon\Mvc\Controller
         $data = Pengguna::find([
             'order' => 'nip_nim'
         ]);
+      
+       
         $this->view->data = $data;
     }
 
@@ -28,5 +30,19 @@ class PenggunaController extends \Phalcon\Mvc\Controller
         $response->setContent(json_encode($resData));
         return $response;
     }
+    public function editAction()
+    {
+        $id_pengguna = $this->request->getPost('id');
+        $pengguna = Pengguna::findFirstByidPengguna($id_pengguna);
+        
+        $pengguna->nama = $this->request->getPost('nama');
+        $pengguna->foto = $this->request->getPost('foto');
+        $pengguna->hak_akses = $this->request->getPost('hak_akses');
+        
+        if ($pengguna->save()) {
+            $this->response->redirect('pengguna');
+        }
+    }
+    
 
 }

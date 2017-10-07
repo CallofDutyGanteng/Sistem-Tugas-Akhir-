@@ -7,50 +7,6 @@
 </div>
 <?php $this->flashSession->output(); ?>
 
-<!-- Modal Edit Data Pengguna -->
-<div class="modal fade" id="modalUbah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <input type="hidden" value="" >
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Mengubah Data</h4>
-            </div>
-
-            <div class="modal-body">
-                <form action="<?= $this->url->get('dosen/update') ?>" class="form-horizontal" method="POST">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="nip_nim">NIP/NIM:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control edit_nip_nim" id="nip_nim" name="nip_nim" value="" readonly>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="nama">Nama:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control edit_name" id="nama" name="nama" placeholder="Masukkan Nama" value="" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="bidang">Hak Akses:</label>
-                        <div class="col-sm-8">
-                            
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button id="update" class="btn btn-primary" type="submit">Simpan</button></td>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="table-responsive">
     <table class="table table-hover">
         <thead>
@@ -70,29 +26,61 @@
                 <td><img src="img/<?= $d->foto ?>" alt="" width="120" height="84"></td>
                 <td><?= $d->hak_akses ?></td>
                 <td>
-                    <a class="btn btn-warning" data-toggle="modal" data-target="#modalUbah">Ubah</a>
+                    <a id="edit" class="btn btn-primary" data-toggle="modal" data-target="#myModal<?= $d->id_pengguna ?>">Edit</a>
+                </td>
                 </td>
             </tr>
+<div class="modal fade" id="myModal<?= $d->id_pengguna ?>" role="dialog">
+<div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+        <?= $this->tag->form(['pengguna/edit/', 'role' => 'form']) ?>
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Edit Data</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-lg-12">
+                        <div class="panel panel-body">
+                                <input type="hiden" name="id"  value="<?= $d->id_pengguna ?>">
+                                <div class="form-group">
+                                    <label for="">NIP / NIM</label>
+                                    <input type="text" name="nip_nim"  value="<?= $d->nip_nim ?>"  class="form-control" readonly="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Nama :</label>
+                                    <input type="text" name="nama" value="<?= $d->nama ?>"  class="form-control" 
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="">Foto :</label>
+                                    <input type="text" name="foto" class="form-control"   value="<?= $d->foto ?>">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Hak Akses</label>
+                                    <select name="hak_akses" id="hak_akses">
+                                        <option <?php if ($d->hak_akses == 'administrator') { ?><?= 'selected' ?> value="administrator">Administrator</option>
+                                        <option <?php } elseif ($d->hak_akses == 'dosen') { ?><?= 'selected' ?> value="dosen" >Dosen</option>
+                                        <option <?php } elseif ($d->hak_akses == 'mahasiswa') { ?><?= 'selected' ?> value="mahasiswa">Mahasiswa</option>
+                                        <option <?php } elseif ($d->hak_akses == 'kordinatorTA') { ?><?= 'selected' ?><?php } ?> value="kordinatorTA">Kordinator TA</option>
+                                    </select>
+                                </div>
+                        </div>
+                </div>
+            </div>
+    <div class="modal-footer">
+        <button type="submit"  class="btn btn-info">Edit</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+    </form>
+</div>
+
+</div>
+</div>
+</div>
         <?php } ?>
         </tbody>
     </table>
 </div>
 
-
-<!-- Javascript untuk popup modal Edit--> 
-<script type="text/javascript">
-   $(document).ready(function () {
-   $(".open_modal").click(function(e) {
-      var m = $(this).attr("id");
-           $.ajax({
-                   url: "index.volt",
-                   type: "GET",
-                   data : {modal_id: m,},
-                   success: function (ajaxData){
-                   $("#ModalUbah").html(ajaxData);
-                   $("#ModalUbah").modal('show',{backdrop: 'true'});
-               }
-               });
-        });
-      });
-</script>
