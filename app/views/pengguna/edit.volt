@@ -1,13 +1,3 @@
-<div class="row">
-    <div class="col-md-12">
-        <div class="page-header">
-
-        </div>
-    </div>
-</div>
-<?php $this->flashSession->output(); ?>
-
-<!-- Modal Edit Data Pengguna -->
 <div class="modal fade" id="modalUbah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -18,7 +8,7 @@
             </div>
 
             <div class="modal-body">
-                <form action="<?= $this->url->get('dosen/update') ?>" class="form-horizontal" method="POST">
+                <form action="{{url("dosen/update")}}" class="form-horizontal" method="POST">
                     <div class="form-group">
                         <label class="control-label col-sm-2" for="nip_nim">NIP/NIM:</label>
                         <div class="col-sm-8">
@@ -50,49 +40,3 @@
         </div>
     </div>
 </div>
-
-<div class="table-responsive">
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>NIP / NIM</th>
-            <th>Nama</th>
-            <th>Foto</th>
-            <th>Hak Akses</th>
-        </tr>
-        </thead>
-        <tbody>
-        <div class="list_pengguna"></div>
-        <?php foreach ($data as $d) { ?>
-            <tr>
-                <td><?= $d->nip_nim ?></td>
-                <td><?= $d->nama ?></td>
-                <td><img src="img/<?= $d->foto ?>" alt="" width="120" height="84"></td>
-                <td><?= $d->hak_akses ?></td>
-                <td>
-                    <a class="btn btn-warning" data-toggle="modal" data-target="#modalUbah">Ubah</a>
-                </td>
-            </tr>
-        <?php } ?>
-        </tbody>
-    </table>
-</div>
-
-
-<!-- Javascript untuk popup modal Edit--> 
-<script type="text/javascript">
-   $(document).ready(function () {
-   $(".open_modal").click(function(e) {
-      var m = $(this).attr("id");
-           $.ajax({
-                   url: "index.volt",
-                   type: "GET",
-                   data : {modal_id: m,},
-                   success: function (ajaxData){
-                   $("#ModalUbah").html(ajaxData);
-                   $("#ModalUbah").modal('show',{backdrop: 'true'});
-               }
-               });
-        });
-      });
-</script>
