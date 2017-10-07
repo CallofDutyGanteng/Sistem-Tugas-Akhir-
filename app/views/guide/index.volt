@@ -3,6 +3,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="panel panel-default">
+
             <div class="panel panel-heading">
                 <h3 style="color: #0d6aad">Panduan-Pelaksanaan Tugas Akhir Mahasiswa Teknik</h3>
             </div>
@@ -22,12 +23,8 @@
                     Tahap Pelaksanaan Tugas Akhir Dimulai Dari Pencarian Pembimbing Jurusan, Pengajuan Ke Keordinator TA, Melengkapi Syarat-Syarat Yaitu Proposal, Hasil, Sidang dan akhirnya Surat Keterangan Lulus.
                 </p>
                 <div class="container">
-
-                    <div class="col-md-8">
-
                     <br/>
                     <div class="col-md-8 col-md-offset-2">
-
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
@@ -42,61 +39,37 @@
                             <!-- deklarasi carousel -->
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-
-                                    {{ image('img/1442659371859.jpg', 'width':'100%') }}
-
                                     {{ image('img/tahap 1.1.png', 'width':'100%') }}
-
                                     <div class="carousel-caption">
                                         <h4>PENGAMBILAN KARTU BEBAS PUSTAKA UNIVERSITAS</h4>
                                     </div>
                                 </div>
                                 <div class="item">
-
-                                    {{ image('img/1442659371859.jpg', 'width':'100%') }}
-
                                     {{ image('img/tahap 1.2.png', 'width':'100%') }}
-
                                     <div class="carousel-caption">
                                         <h4>SURAT KETERANGAN LULUS SIDANG SARJANA</h4>
                                     </div>
                                 </div>
                                 <div class="item">
-
-                                    {{ image('img/1442659371859.jpg', 'width':'100%') }}
-
                                     {{ image('img/tahap 2.1.png', 'width':'100%') }}
-
                                     <div class="carousel-caption">
                                         <h4>KARTU BEBAS PUSTAKA DARI FAKULTAS</h4>
                                     </div>
                                 </div>
                                 <div class="item">
-
-                                    {{ image('img/1442659371859.jpg', 'width':'100%') }}
-
                                     {{ image('img/tahap 2.2.png', 'width':'100%') }}
-
                                     <div class="carousel-caption">
                                         <h4>TRANSKIP UNTUK SURAT KETERANGAN LULUS</h4>
                                     </div>
                                 </div>
                                 <div class="item">
-
-                                    {{ image('img/1442659371859.jpg', 'width':'100%') }}
-
                                     {{ image('img/tahap 3.png', 'width':'100%') }}
-
                                     <div class="carousel-caption">
                                         <h4>SURAT KETERANGAN LULUS</h4>
                                     </div>
                                 </div>
                                 <div class="item">
-
-                                    {{ image('img/1442659371859.jpg', 'width':'100%') }}
-
                                     {{ image('img/tahap 4.png', 'width':'100%') }}
-
                                     <div class="carousel-caption">
                                         <h4>DAFTAR WISUDA</h4>
                                     </div>
@@ -115,10 +88,7 @@
                         </div>
                     </div>
                 </div>
- 
-                {{ image('img/index.jpeg', 'width':'100%') }}
-
-
+            </div>
             </div>
 
             {% elseif session.hak_akses == 'dosen' %}
