@@ -8,7 +8,6 @@
 <?php $this->flashSession->output(); ?>
 
 <!-- Modal Edit Data Pengguna -->
-<?php foreach ($data as $v) { ?>
 <div class="modal fade" id="modalUbah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -51,8 +50,6 @@
         </div>
     </div>
 </div>
-<?php } ?>
-<!-- List Data Mahasiswa -->
 
 <div class="table-responsive">
     <table class="table table-hover">
@@ -73,7 +70,7 @@
                 <td><img src="img/<?= $d->foto ?>" alt="" width="120" height="84"></td>
                 <td><?= $d->hak_akses ?></td>
                 <td>
-                    <a data-id_pengguna="<?= $d->id_pengguna ?>" data-nip_nim="<?= $d->nip_nim ?>" data-nama="<?= $d->nama ?>" data-foto="<?= $d->foto ?>" data-hak_akses ="<?= $d->hak_akses ?>" class="btn btn-warning" id="editbtn" data-toggle="modal" data-target="#modalUbah">Ubah</a>
+                    <a class="btn btn-warning" data-toggle="modal" data-target="#modalUbah">Ubah</a>
                 </td>
             </tr>
         <?php } ?>
