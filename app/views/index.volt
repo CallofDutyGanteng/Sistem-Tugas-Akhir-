@@ -13,7 +13,10 @@
         {{ stylesheet_link(["rel":"icon", "href":"img/e-mahasiswa.png", "type":"image/x-icon"]) }}
         {{ stylesheet_link("vendor/metisMenu/metisMenu.css") }}
         {{ stylesheet_link("vendor/font-awesome/css/font-awesome.css") }}
-        {{ stylesheet_link("css/jquery.modal.css") }}
+        {#{{ stylesheet_link("css/jquery.modal.css") }}#}
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        {{ javascript_include('js/jquery-3.2.1.min.js') }}
+
     </head>
 
     <body>
@@ -25,51 +28,17 @@
                 </div>
            {% include "layouts/footbar.volt" %}
             <?php } else { ?>
+
                 {% include "auth/login.volt" %}
             <?php } ?>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        {{ javascript_include('js/jquery-3.2.1.min.js') }}
-                {#{{ javascript_include('js/jquery-3.2.1.min.js') }}#}
-        <!-- Latest compiled and minified JavaScript -->
-        {{ javascript_include('js/bootstrap.min.js') }}
-        {{ javascript_include('js/sb-admin-2.min.js') }}
-        {{ javascript_include('vendor/morrisjs/morris.js') }}
-        {{ javascript_include('vendor/metisMenu/metisMenu.min.js') }}
-        {#{{ javascript_include('js/flotdata.js') }}#}
-        {{ javascript_include('js/side-navbar.js') }}
 
+                    {#{{ javascript_include('js/jquery-3.2.1.min.js') }}#}
+            <!-- Latest compiled and minified JavaScript -->
+            {{ javascript_include('js/bootstrap.min.js') }}
+            {{ javascript_include('js/sb-admin-2.min.js') }}
+            {{ javascript_include('vendor/morrisjs/morris.js') }}
+            {{ javascript_include('vendor/metisMenu/metisMenu.min.js') }}
+            {#{{ javascript_include('js/flotdata.js') }}#}
+            {{ javascript_include('js/side-navbar.js') }}
     </body>
 </html>
-<script type="text/javascript">
-    $('.form_datetime').datetimepicker({
-        //language:  'fr',
-        weekStart: 1,
-        todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        forceParse: 0,
-        showMeridian: 1
-    });
-    $('.form_date').datetimepicker({
-        language:  'id',
-        weekStart: 1,
-        todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        minView: 2,
-        forceParse: 0
-    });
-    $('.form_time').datetimepicker({
-        language:  'id',
-        weekStart: 1,
-        todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 1,
-        minView: 0,
-        maxView: 1,
-        forceParse: 0
-    });
-</script>

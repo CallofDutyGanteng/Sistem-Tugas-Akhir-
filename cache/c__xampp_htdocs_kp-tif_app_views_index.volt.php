@@ -13,7 +13,10 @@
         <?= $this->tag->stylesheetLink(['rel' => 'icon', 'href' => 'img/e-mahasiswa.png', 'type' => 'image/x-icon']) ?>
         <?= $this->tag->stylesheetLink('vendor/metisMenu/metisMenu.css') ?>
         <?= $this->tag->stylesheetLink('vendor/font-awesome/css/font-awesome.css') ?>
-        <?= $this->tag->stylesheetLink('css/jquery.modal.css') ?>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <?= $this->tag->javascriptInclude('js/jquery-3.2.1.min.js') ?>
+
     </head>
 
     <body>
@@ -61,34 +64,30 @@
                 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
-                        <?= $this->tag->image(['img/1442659371859.jpg', 'width' => '200', 'heigth' => '160', 'class' => 'offsside']) ?>
-                <li class="sidebar-search">
-                    <div class="input-group custom-search-form">
-                        
-
-                        
-                    </div>
-                    <!-- /input-group -->
+            <?= $this->tag->image(['img/e-mahasiswa.png', 'width' => '200', 'heigth' => '160', 'class' => 'offsside']) ?>
+            <li class="sidebar-search">
+                <div class="input-group custom-search-form">
+                     
+                </div>
+                <!-- /input-group -->
+            </li>
+            <?php if ($this->session->hak_akses == 'administrator') { ?>
+                <li>
+                    <?= $this->tag->linkTo(['guide', ' Home', 'class' => 'fa fa-home']) ?>
                 </li>
-                <?php if ($this->session->hak_akses == 'administrator') { ?>
-                    <li>
-                        <?= $this->tag->linkTo(['guide', ' Home', 'class' => 'fa fa-home']) ?>
-                    </li>
-                    <li>
-                        <?= $this->tag->linkTo(['pengguna', ' Pengguna', 'class' => 'fa fa-user']) ?>
-                    </li>
-                    <li>
-                        <?= $this->tag->linkTo(['setting', ' Settings', 'class' => 'fa fa-gear']) ?>
-                    </li>
-                <?php } elseif ($this->session->hak_akses == 'dosen') { ?>
+                <li>
+                    <?= $this->tag->linkTo(['pengguna', ' Pengguna', 'class' => 'fa fa-user']) ?>
+                </li>
+                <li>
+                    <?= $this->tag->linkTo(['setting', ' Settings', 'class' => 'fa fa-gear']) ?>
+                </li>
+            <?php } elseif ($this->session->hak_akses == 'dosen') { ?>
                     <li>
                         <?= $this->tag->linkTo(['profil', ' Profil', 'class' => 'fa fa-user']) ?>
+                    </li>
                     <li>
                         <?= $this->tag->linkTo(['proposal', ' Syarat Proposal', 'class' => 'fa fa-map']) ?>
                     </li>
-                <?php } elseif ($this->session->hak_akses == 'mahasiswa') { ?>
-                    <li>
-                        <?= $this->tag->linkTo(['proposal', ' Syarat', 'class' => 'fa fa-map']) ?>
                     <li>
                         <?= $this->tag->linkTo(['mahasiswa', ' Bimbingan Ku', 'class' => 'fa fa-user']) ?>
                     </li>
@@ -97,12 +96,9 @@
                     </li>
                 <?php } elseif ($this->session->hak_akses == 'mahasiswa') { ?>
                     <li>
-                        <?= $this->tag->linkTo(['profil', ' Profil', 'class' => 'fa fa-user']) ?>
+                        <?= $this->tag->linkTo(['pengajuan', ' Pengajuan', 'class' => 'fa fa-map']) ?>
                     </li>
-                    <li>
-                        <?= $this->tag->linkTo(['proposal', ' Proposal', 'class' => 'fa fa-map']) ?>
-                    </li>
-                <?php } elseif ($this->session->hak_akses == 'kordinatorTA') { ?>
+                    <?php } elseif ($this->session->hak_akses == 'kordinatorTA') { ?>
                     <li>
                         <?= $this->tag->linkTo(['guide', ' Home', 'class' => 'fa fa-home']) ?>
                     </li>
@@ -115,18 +111,20 @@
                     <li>
                         <?= $this->tag->linkTo(['syarat', ' Syarat Tugas Akhir', 'class' => 'fa fa-file']) ?>
                     </li>
-                <?php } ?>
+                    <?php } ?>
 
         </ul>
     </div>
     <!-- /.sidebar-collapse -->
 </div>
 <!-- /.navbar-static-side -->
+
                 <div id="page-wrapper">
                     <?= $this->getContent() ?>
                 </div>
            
             <?php } else { ?>
+
                 <?php if ($this->session->has('nip_nim')) { ?>
     <?php $this->response->redirect(''); ?>
 <?php } else { ?>
@@ -168,50 +166,16 @@
     </body>
 </html>
 <?php } ?>
-            <?php } ?>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <?= $this->tag->javascriptInclude('js/jquery-3.2.1.min.js') ?>
-                
-        <!-- Latest compiled and minified JavaScript -->
-        <?= $this->tag->javascriptInclude('js/bootstrap.min.js') ?>
-        <?= $this->tag->javascriptInclude('js/sb-admin-2.min.js') ?>
-        <?= $this->tag->javascriptInclude('vendor/morrisjs/morris.js') ?>
-        <?= $this->tag->javascriptInclude('vendor/metisMenu/metisMenu.min.js') ?>
-        
-        <?= $this->tag->javascriptInclude('js/side-navbar.js') ?>
 
+            <?php } ?>
+
+                    
+            <!-- Latest compiled and minified JavaScript -->
+            <?= $this->tag->javascriptInclude('js/bootstrap.min.js') ?>
+            <?= $this->tag->javascriptInclude('js/sb-admin-2.min.js') ?>
+            <?= $this->tag->javascriptInclude('vendor/morrisjs/morris.js') ?>
+            <?= $this->tag->javascriptInclude('vendor/metisMenu/metisMenu.min.js') ?>
+            
+            <?= $this->tag->javascriptInclude('js/side-navbar.js') ?>
     </body>
 </html>
-<script type="text/javascript">
-    $('.form_datetime').datetimepicker({
-        //language:  'fr',
-        weekStart: 1,
-        todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        forceParse: 0,
-        showMeridian: 1
-    });
-    $('.form_date').datetimepicker({
-        language:  'id',
-        weekStart: 1,
-        todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 2,
-        minView: 2,
-        forceParse: 0
-    });
-    $('.form_time').datetimepicker({
-        language:  'id',
-        weekStart: 1,
-        todayBtn:  1,
-        autoclose: 1,
-        todayHighlight: 1,
-        startView: 1,
-        minView: 0,
-        maxView: 1,
-        forceParse: 0
-    });
-</script>

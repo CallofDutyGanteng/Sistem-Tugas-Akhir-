@@ -71,77 +71,48 @@
     </div>
 </div>
 
-<!-- Modal Edit Data Mahasiswa -->
-<?php foreach ($data as $v) { ?>
-<div class="modal fade" id="modalUbah" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <input type="hidden" value="<?= $v->nip ?>" >
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Mengubah Data</h4>
-            </div>
-
-            <div class="modal-body">
-                <form action="<?= $this->url->get('dosen/update') ?>" class="form-horizontal" method="POST">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="nip">NIP:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control edit_nip" id="nip" name="nip" value="<?= $v->nip ?>" readonly>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="nama">Nama:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control edit_name" id="nama" name="nama" placeholder="Masukkan Nama" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="bidang">Bidang Keahlian:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control edit_bidang" id="bidang" value="<?= $v->bidang ?>" name="bidang" placeholder="Masukkan Bidang Keahlian" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button id="update" class="btn btn-primary" type="submit">Simpan</button></td>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
-<?php } ?>
-<!-- List Data Mahasiswa -->
-
 <div class="table-responsive">
     <table class="table table-hover">
         <thead>
-        <tr>
-            <th>NIP</th>
-            <th>Nama</th>
-            <th>Bidang Keahlian</th>
-            <th>Option</th>
-        </tr>
+            <tr>
+                <th>NIP</th>
+                <th>Nama</th>
+                <th>Bidang Keahlian</th>
+                <th>Option</th>
+            </tr>
         </thead>
         <tbody>
-        <div class="list_mahasiswa"></div>
-        <?php foreach ($data as $d) { ?>
-            <tr>
+            <div class="list_mahasiswa"></div>
+            <?php foreach ($data as $d) { ?>
+            <tr id='data<?= $d->nip ?>'>
                 <td><?= $d->nip ?></td>
                 <td><?= $d->nama ?></td>
                 <td><?= $d->bidang ?></td>
                 <td>
-                    <!--<a href="index/edit/<?= $d->nip ?>" class="btn btn-warning" role="button">Ubah</a>-->
-                    <a data-nip="<?= $d->nip ?>" data-nama="<?= $d->nama ?>" data-bidang="<?= $d->bidang ?>" class="btn btn-warning" id="editbtn" data-toggle="modal" data-target="#modalUbah">Ubah</a>
+                    <a href="#" id="btnedit<?= $d->nip ?>" class="btn btn-primary">Edit</a>
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            $('#formedit<?= $d->nip ?>').hide();
+                            $('#btnedit<?= $d->nip ?>').click(function () {
+                                $('#formedit<?= $d->nip ?>').fadeToggle();
+                            })
+                        })
+                    </script>
                     <a href="" data-href="dosen/delete/<?= $d->nip ?>" class="btn btn-danger" data-toggle="modal" data-target="#modalHapus">Hapus</a>
                 </td>
             </tr>
-        <?php } ?>
+            <?= $this->tag->form(['dosen/update', 'rule' => 'form']) ?>
+                <tr style="background-color:#337ab7" class="formedit" id='formedit<?= $d->nip ?>'>
+                        <td colspan="4">
+                            <input type="text" name="nip" value="<?= $d->nip ?>" readonly>
+                            <input type="text" name="nama" value="<?= $d->nama ?>">
+                            <input type="text" name="bidang" value="<?= $d->bidang ?>">
+                            <button type="submit" class="btn btn-success">simpan</button>
+                        </td>
+
+                </tr>
+            </form>
+            <?php } ?>
         </tbody>
     </table>
 </div>

@@ -8,9 +8,12 @@ class MahasiswaController extends \Phalcon\Mvc\Controller
         $data = Mahasiswa::find([
             'order' => 'nim'
         ]);
-
         $this->view->data = $data;
+
+
     }
+
+
 
     public function listAction()
     {

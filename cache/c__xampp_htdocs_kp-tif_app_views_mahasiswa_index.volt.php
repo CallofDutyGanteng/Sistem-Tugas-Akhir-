@@ -124,6 +124,7 @@
         <th>Nama</th>
         <th>Judul Tugas Akhir</th>
         <th>Option</th>
+
       </tr>
     </thead>
     <tbody>
@@ -131,6 +132,7 @@
       <?php foreach ($data as $d) { ?>
 
       <tr>
+
         <td><?= $d->nim ?></td>
         <td><?= $d->name ?></td>
         <td><?= $d->department ?></td>
@@ -143,4 +145,5 @@
         <?php } ?>
       </tbody>
     </table>
+    <?php echo count($data)  ?>
   </div>

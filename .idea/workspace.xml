@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="24ebf515-5abe-4293-8996-8d443fcf03fb" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" />
@@ -192,6 +193,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/npm.js" afterPath="$PROJECT_DIR$/public/js/npm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/side-navbar.js" afterPath="$PROJECT_DIR$/public/js/side-navbar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/simple_phalcon.sql" afterPath="$PROJECT_DIR$/simple_phalcon.sql" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -201,18 +205,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="ta-kerjapraktek" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="head.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/head.volt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
               <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding />
+=======
+      <file leaf-file-name="SyaratController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/SyaratController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="22" column="36" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="22" selection-end-column="36" />
+              <folding>
+                <element signature="e#6#28#0#PHP" expanded="true" />
+              </folding>
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="side.volt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/side.volt">
           <provider selected="true" editor-type-id="text-editor">
@@ -228,16 +247,30 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+      <file leaf-file-name="PengajuanController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/PengajuanController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="10" selection-end-column="30" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/app/views/index.volt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="760">
               <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+=======
+        <entry file="file://$PROJECT_DIR$/app/views/syarat/index.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
               <folding />
             </state>
           </provider>
@@ -274,6 +307,7 @@
         <option value="$PROJECT_DIR$/app/views/dosen/index.volt" />
         <option value="$PROJECT_DIR$/app/views/index/index.volt" />
         <option value="$PROJECT_DIR$/app/views/auth/login.volt" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/views/layouts/foot.volt" />
         <option value="$PROJECT_DIR$/app/views/index.volt" />
         <option value="$PROJECT_DIR$/app/views/auth/index.volt" />
@@ -282,6 +316,42 @@
         <option value="$PROJECT_DIR$/app/views/layouts/side.volt" />
         <option value="$PROJECT_DIR$/app/views/layouts/head.volt" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
+=======
+        <option value="$PROJECT_DIR$/app/controllers/DosenController.php" />
+        <option value="$PROJECT_DIR$/public/css/tab.css" />
+        <option value="$PROJECT_DIR$/public/js/bootstrap-datetimepicker.js" />
+        <option value="$PROJECT_DIR$/public/js/bootstrap-datetimepicker.fr.js" />
+        <option value="$PROJECT_DIR$/app/controllers/GuideController.php" />
+        <option value="$PROJECT_DIR$/app/views/layouts/side.volt" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/views/layouts/head.volt" />
+        <option value="$PROJECT_DIR$/public/js/style.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/foot.volt" />
+        <option value="$PROJECT_DIR$/app/models/Mahasiswa.php" />
+        <option value="$PROJECT_DIR$/app/models/Dosen.php" />
+        <option value="$PROJECT_DIR$/app/models/Syarat.php" />
+        <option value="$PROJECT_DIR$/app/config/loader.php" />
+        <option value="$PROJECT_DIR$/app/config/services.php" />
+        <option value="$PROJECT_DIR$/app/library/Auth/Auth.php" />
+        <option value="$PROJECT_DIR$/app/views/guide/index.volt" />
+        <option value="$PROJECT_DIR$/app/views/layouts/header.volt" />
+        <option value="$PROJECT_DIR$/app/views/layouts/sidebar.volt" />
+        <option value="$PROJECT_DIR$/app/views/auth/index.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/views/proposal/js.volt" />
+        <option value="$PROJECT_DIR$/app/views/proposal/index.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/ProposalController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/library/Menu.php" />
+        <option value="$PROJECT_DIR$/app/views/index.volt" />
+        <option value="$PROJECT_DIR$/app/controllers/IndexController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/MahasiswaController.php" />
+        <option value="$PROJECT_DIR$/app/views/mahasiswa/index.volt" />
+        <option value="$PROJECT_DIR$/app/config/config.php" />
+        <option value="$PROJECT_DIR$/app/controllers/PengajuanController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/SyaratController.php" />
+        <option value="$PROJECT_DIR$/app/views/syarat/index.volt" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
       </list>
     </option>
   </component>
@@ -315,6 +385,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -333,7 +405,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="kp-tif" />
+=======
+              <option name="myItemId" value="ta-kerjapraktek" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -355,6 +431,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="img" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -374,6 +451,9 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
+=======
+              <option name="myItemId" value="doc" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,6 +494,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="syarat" />
+<<<<<<< HEAD
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -480,6 +561,8 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dosen" />
+=======
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -501,7 +584,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
+              <option name="myItemId" value="mahasiswa" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -561,8 +644,11 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="Scope" />
+=======
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -573,9 +659,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/public/css" />
+=======
+      <recent name="$PROJECT_DIR$/public/doc" />
+      <recent name="$PROJECT_DIR$/app/library" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/public/vendor" />
+      <recent name="$PROJECT_DIR$/public/img/users" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/mahasiswa" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
     </key>
   </component>
   <component name="RunDashboard">
@@ -677,6 +774,7 @@
       <workItem from="1506962915021" duration="10760000" />
       <workItem from="1507012287226" duration="290000" />
       <workItem from="1507083305941" duration="740000" />
+<<<<<<< HEAD
       <workItem from="1507103025061" duration="53000" />
     </task>
     <servers />
@@ -688,15 +786,145 @@
     <frame x="0" y="-4" width="1366" height="735" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <workItem from="1507103025061" duration="2000000" />
+      <workItem from="1507105159207" duration="15166000" />
+      <workItem from="1507126028594" duration="1316000" />
+      <workItem from="1507136958252" duration="7587000" />
+      <workItem from="1507250384924" duration="6484000" />
+      <workItem from="1507259746822" duration="231000" />
+      <workItem from="1507261511385" duration="1547000" />
+      <workItem from="1507264764039" duration="215000" />
+      <workItem from="1507269614177" duration="624000" />
+      <workItem from="1507273928644" duration="2389000" />
+      <workItem from="1507439577537" duration="10240000" />
+      <workItem from="1507455323448" duration="1497000" />
+      <workItem from="1507458575592" duration="269000" />
+      <workItem from="1507468599480" duration="19000" />
+    </task>
+    <task id="LOCAL-00001" summary="Ubah File Nama Header">
+      <created>1507137766565</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1507137766565</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ubah File Nama Header">
+      <created>1507144477441</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1507144477441</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ubah File Nama Header">
+      <created>1507144539711</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1507144539711</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Penambah field foto di database pengguna">
+      <created>1507215252096</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1507215252103</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Penambah field foto di database pengguna">
+      <created>1507216581128</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1507216581128</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Penambah field foto di database pengguna">
+      <created>1507217579979</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1507217579979</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Penambah field foto di database pengguna">
+      <created>1507217631027</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1507217631027</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Penambahan File Icons Dan icon.css">
+      <created>1507217970769</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1507217970769</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Upload File">
+      <created>1507262225023</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1507262225023</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Upload File">
+      <created>1507447196074</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1507447196074</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Pembaaharuan">
+      <created>1507451205109</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1507451205109</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Pembaaharuan">
+      <created>1507451268037</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1507451268037</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Pembaaharuan">
+      <created>1507451395347</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1507451395347</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Pembaaharuan">
+      <created>1507458599066</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1507458599066</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="81899000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-11" width="1368" height="743" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31551978" sideWeight="0.4938704" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.093354434" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6698413" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31551978" sideWeight="0.5061296" order="2" side_tool="true" content_ui="tabs" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -713,13 +941,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< HEAD
     <option name="LAST_COMMIT_MESSAGE" value="" />
+=======
+    <MESSAGE value="Ubah File Nama Header" />
+    <MESSAGE value="Penambah field foto di database pengguna" />
+    <MESSAGE value="Penambahan File Icons Dan icon.css" />
+    <MESSAGE value="Upload File" />
+    <MESSAGE value="Pembaaharuan" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pembaaharuan" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/controllers/AuthController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -746,6 +984,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/DosenController.php">
+=======
+    <entry file="file://$PROJECT_DIR$/public/js/bootstrap-datetimepicker.js">
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
@@ -753,6 +994,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/views/index.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1480">
@@ -767,6 +1009,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+=======
+    <entry file="file://$PROJECT_DIR$/public/img/index.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index/index.volt">
@@ -799,6 +1046,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -824,6 +1072,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index/index.volt">
+=======
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/foot.volt" />
+    <entry file="file://$PROJECT_DIR$/app/views/index/index.volt" />
+    <entry file="file://$PROJECT_DIR$/app/controllers/ControllerBase.php">
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
@@ -905,6 +1158,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/public/js/npm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -920,6 +1174,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/router.php">
+=======
+    <entry file="file://$PROJECT_DIR$/public/js/summernote.js">
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -935,6 +1192,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -971,6 +1229,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+=======
+    <entry file="file://$PROJECT_DIR$/public/img/users/users.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Mahasiswa.php">
@@ -1003,6 +1266,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/views/layouts/foot.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1021,18 +1285,86 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/app/controllers/ProposalController.php" />
     <entry file="file://$PROJECT_DIR$/app/controllers/DosenController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="620">
+          <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/proposal/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/library/Menu.php" />
+    <entry file="file://$PROJECT_DIR$/app/views/auth/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-384">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="40" lean-forward="false" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#6#33#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dosen/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PenggunaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Pengajuan.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="44">
+          <caret line="57" column="30" lean-forward="false" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/views/syarat/index.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1048,43 +1380,99 @@
             <element signature="e#7#87#0#PHP" expanded="true" />
             <element signature="e#88#115#0#PHP" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/app/views/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/SyaratController.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/GuideController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Mahasiswa.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="479">
+          <caret line="52" column="30" lean-forward="false" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/views/layouts/side.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="24" column="78" lean-forward="false" selection-start-line="24" selection-start-column="78" selection-end-line="24" selection-end-column="78" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/controllers/MahasiswaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/views/index.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="38" column="41" lean-forward="false" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/views/mahasiswa/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="149" column="10" lean-forward="false" selection-start-line="149" selection-start-column="10" selection-end-line="149" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/views/layouts/head.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/models/Syarat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="33" column="37" lean-forward="false" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
@@ -1094,6 +1482,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-300">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="595">
+          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+          <folding />
+>>>>>>> 5765bdc6afb70260347f69923a5bf1db00aa3fb1
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PengajuanController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SyaratController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="22" column="36" lean-forward="false" selection-start-line="13" selection-start-column="14" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <element signature="e#6#28#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

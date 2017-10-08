@@ -106,6 +106,7 @@
                 </div>
            
             <?php } else { ?>
+
                 <html>
     <head>
         <title>Login</title>
