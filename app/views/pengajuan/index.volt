@@ -9,16 +9,15 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                {% if session.hak_akses == "mahasiswa" %} 
-                Form Pengajuan Proposal 
-                {% elseif session.hak_akses == "kordinatorTA" %} 
-                Form Pemilihan Riviwer 
-                {% endif %}
+                {% if session.hak_akses == "mahasiswa" %} Form Pengajuan Proposal {% elseif session.hak_akses == "kordinatorTA" %} Form Pemilihan Riviwer {% endif %}
             </div>
             <div class="panel panel-body">
+                <div>
+                <?php $this->flashSession->output() ?>
+                </div>
                 {% if session.hak_akses == "mahasiswa" %}
                 <div style="clear:both"></div>
-                <form action="Pengajuan/upload" method="post" enctype="multipart/form-data">
+                <form action="pengajuan/pengajuansyarat" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="form-group">
@@ -28,9 +27,9 @@
                             <div class="form-group">
                                 <label for="" style="color: #0d6aad"><i class="glyphicon glyphicon-user"></i> Calon Pembimbing
                                 </label>
-                                <select name="riviewer_1" id="countrycode" class="form-control">
+                                <select name="calon_pembimbing" id="countrycode" class="form-control">
                                     {% for s in dosen %}
-                                    <option name="{{ s.nip }}" value="{{ s.nip }}" id="{{ s.nip }}">{{ s.nama }}</option>
+                                    <option value="{{ s.nip }}" id="{{ s.nip }}">{{ s.nama }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -43,7 +42,7 @@
                                     <input type="file" name="file">
                                 </div>
                             </div>
-                            {% for d in data2 %}
+                            {% for d in data %}
                             <div class="form-group">
                                 <div class="alert alert-info">
                                     <label for=""><i class="fa fa-file"></i> {{ d }}</label>

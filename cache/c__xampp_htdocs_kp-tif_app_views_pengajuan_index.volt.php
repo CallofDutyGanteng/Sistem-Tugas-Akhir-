@@ -9,16 +9,15 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <?php if ($this->session->hak_akses == 'mahasiswa') { ?> 
-                Form Pengajuan Proposal 
-                <?php } elseif ($this->session->hak_akses == 'kordinatorTA') { ?> 
-                Form Pemilihan Riviwer 
-                <?php } ?>
+                <?php if ($this->session->hak_akses == 'mahasiswa') { ?> Form Pengajuan Proposal <?php } elseif ($this->session->hak_akses == 'kordinatorTA') { ?> Form Pemilihan Riviwer <?php } ?>
             </div>
             <div class="panel panel-body">
+                <div>
+                <?php $this->flashSession->output() ?>
+                </div>
                 <?php if ($this->session->hak_akses == 'mahasiswa') { ?>
                 <div style="clear:both"></div>
-                <form action="Pengajuan/upload" method="post" enctype="multipart/form-data">
+                <form action="pengajuan/pengajuansyarat" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="form-group">
@@ -28,9 +27,9 @@
                             <div class="form-group">
                                 <label for="" style="color: #0d6aad"><i class="glyphicon glyphicon-user"></i> Calon Pembimbing
                                 </label>
-                                <select name="riviewer_1" id="countrycode" class="form-control">
+                                <select name="calon_pembimbing" id="countrycode" class="form-control">
                                     <?php foreach ($dosen as $s) { ?>
-                                    <option name="<?= $s->nip ?>" value="<?= $s->nip ?>" id="<?= $s->nip ?>"><?= $s->nama ?></option>
+                                    <option value="<?= $s->nip ?>" id="<?= $s->nip ?>"><?= $s->nama ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
@@ -43,7 +42,7 @@
                                     <input type="file" name="file">
                                 </div>
                             </div>
-                            <?php foreach ($data2 as $d) { ?>
+                            <?php foreach ($data as $d) { ?>
                             <div class="form-group">
                                 <div class="alert alert-info">
                                     <label for=""><i class="fa fa-file"></i> <?= $d ?></label>

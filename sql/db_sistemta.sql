@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.4.1deb2ubuntu2
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Oct 05, 2017 at 10:15 PM
--- Server version: 5.7.19-0ubuntu0.16.04.1
--- PHP Version: 7.0.22-0ubuntu0.16.04.1
+-- Host: 127.0.0.1
+-- Generation Time: Oct 09, 2017 at 04:26 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 7.0.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -37,8 +37,9 @@ CREATE TABLE `dosen` (
 --
 
 INSERT INTO `dosen` (`nip`, `nama`, `bidang`) VALUES
-('123', 'fauzi', 'ilmu'),
-('21312312', 'abdi', 'kkkk');
+('1111111111111', 'frankerrererer', 'kesehatanaaa'),
+('12121', 'gege', 'ff'),
+('1230120380', 'febi', 'Jaringan Komputer');
 
 -- --------------------------------------------------------
 
@@ -57,8 +58,6 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`nim`, `name`, `department`) VALUES
-(141524003, 'sadada', 'adada'),
-(141524004, 'Eva Danti Rahmanita', 'Sekretaris Umum I'),
 (141524005, 'Fadhlan Ridwanallah', 'PSDM'),
 (141524006, 'Fahmi Ramadhan', 'Olahraga'),
 (141524007, 'Fariz Aotearoa Rasyid', 'Olahraga'),
@@ -88,6 +87,35 @@ INSERT INTO `mahasiswa` (`nim`, `name`, `department`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pengajuan`
+--
+
+CREATE TABLE `pengajuan` (
+  `id_pengajuan` int(11) NOT NULL,
+  `kode_pengajuan` varchar(50) DEFAULT NULL,
+  `judul` varchar(255) NOT NULL,
+  `file` varchar(255) NOT NULL,
+  `calon_pembimbing` varchar(30) NOT NULL,
+  `syarat_review` text NOT NULL,
+  `tanggal_upload` datetime NOT NULL,
+  `tanggal_upload_update` datetime NOT NULL,
+  `riviewer_1` varchar(30) NOT NULL,
+  `komentar_1` text NOT NULL,
+  `nilai_1` int(11) NOT NULL,
+  `tanggal_menilai_1` datetime NOT NULL,
+  `tanggal_update_menilai_1` datetime NOT NULL,
+  `riviewer_2` varchar(30) NOT NULL,
+  `komentar_2` text NOT NULL,
+  `nilai_2` int(100) NOT NULL,
+  `tanggal_menilai_2` datetime NOT NULL,
+  `tanggal_update_menilai_2` datetime NOT NULL,
+  `hasil` enum('lulus','tidak_lulus') NOT NULL,
+  `tanggal_m_hasil` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pengguna`
 --
 
@@ -105,10 +133,10 @@ CREATE TABLE `pengguna` (
 --
 
 INSERT INTO `pengguna` (`id_pengguna`, `nip_nim`, `nama`, `password`, `foto`, `hak_akses`) VALUES
-(1, '11451105806', 'fitriani', 'c4ca4238a0b923820dcc509a6f75849b', '1442659371859.jpg', 'administrator'),
-(2, '11451201840', 'ahmad fauzi rahman', 'c4ca4238a0b923820dcc509a6f75849b', '1442659371859.jpg', 'dosen'),
-(3, '11', 'Si Fulan', 'c4ca4238a0b923820dcc509a6f75849b', '1442659371859.jpg', 'mahasiswa'),
-(4, '2', 'si fulan', 'c81e728d9d4c2f636f067f89cc14862c', '1442659371859.jpg', 'kordinatorTA');
+(1, '1', 'ahmad fauzi rahmaneeeeeeeeeeee', 'c4ca4238a0b923820dcc509a6f75849b', '1442659371859.jpg', 'administrator'),
+(2, '2', 'ahmad fauzi rahmaneee', 'c81e728d9d4c2f636f067f89cc14862c', '1442659371859.jpg', 'dosen'),
+(3, '3', 'Si Fulan', 'eccbc87e4b5ce2fe28308fd9f2a7baf3', '1442659371859.jpg', 'mahasiswa'),
+(4, '4', 'si fulan', 'a87ff679a2f3e71d9181a67b7542122c', '1442659371859.jpg', 'kordinatorTA');
 
 -- --------------------------------------------------------
 
@@ -121,6 +149,13 @@ CREATE TABLE `syarat` (
   `nama_syarat` varchar(100) NOT NULL,
   `syarat` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `syarat`
+--
+
+INSERT INTO `syarat` (`id`, `nama_syarat`, `syarat`) VALUES
+(1, 'proposal', '[\'Bukti Lulus KKN\',\'Bukti Lulus KP\',\'Bukti Lulus Mentoring\']');
 
 --
 -- Indexes for dumped tables
@@ -137,6 +172,12 @@ ALTER TABLE `dosen`
 --
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`nim`);
+
+--
+-- Indexes for table `pengajuan`
+--
+ALTER TABLE `pengajuan`
+  ADD PRIMARY KEY (`id_pengajuan`);
 
 --
 -- Indexes for table `pengguna`
@@ -156,6 +197,11 @@ ALTER TABLE `syarat`
 --
 
 --
+-- AUTO_INCREMENT for table `pengajuan`
+--
+ALTER TABLE `pengajuan`
+  MODIFY `id_pengajuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
 -- AUTO_INCREMENT for table `pengguna`
 --
 ALTER TABLE `pengguna`
@@ -164,7 +210,7 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT for table `syarat`
 --
 ALTER TABLE `syarat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
