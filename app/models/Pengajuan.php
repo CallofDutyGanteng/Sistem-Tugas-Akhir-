@@ -29,16 +29,30 @@ class Pengajuan extends \Phalcon\Mvc\Model
     /**
      *
      * @var string
+     * @Column(type="string", length=50, nullable=false)
+     */
+    public $metode = 0;
+
+    /**
+     *
+     * @var string
      * @Column(type="string", length=255, nullable=false)
      */
-    public $file = 0;
+    public $doc_proposal = 0;
 
     /**
      *
      * @var string
      * @Column(type="string", length=30, nullable=false)
      */
-    public $calon_pembimbing = 0;
+    public $calon_pembimbing_1 = 0;
+
+    /**
+     *
+     * @var string
+     * @Column(type="string", nullable=false)
+     */
+    public $calon_pembimbing_2 = 0;
 
     /**
      *
@@ -66,7 +80,7 @@ class Pengajuan extends \Phalcon\Mvc\Model
      * @var string
      * @Column(type="string", length=30, nullable=false)
      */
-    public $riviewer_1 = 0;
+    public $reviewer_1 = 0;
 
     /**
      *
@@ -101,7 +115,7 @@ class Pengajuan extends \Phalcon\Mvc\Model
      * @var string
      * @Column(type="string", length=30, nullable=false)
      */
-    public $riviewer_2 = 0;
+    public $reviewer_2 = 0;
 
     /**
      *
@@ -150,7 +164,7 @@ class Pengajuan extends \Phalcon\Mvc\Model
      */
     public function initialize()
     {
-        $this->setSchema("db_sistemTA");
+        $this->setSchema("db_sistemta");
         $this->setSource("pengajuan");
     }
 

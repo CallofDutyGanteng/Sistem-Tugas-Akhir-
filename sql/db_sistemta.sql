@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2017 at 04:26 AM
+-- Generation Time: Oct 11, 2017 at 11:25 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.0.15
 
@@ -93,18 +93,21 @@ INSERT INTO `mahasiswa` (`nim`, `name`, `department`) VALUES
 CREATE TABLE `pengajuan` (
   `id_pengajuan` int(11) NOT NULL,
   `kode_pengajuan` varchar(50) DEFAULT NULL,
+  `nim` bigint(12) NOT NULL,
   `judul` varchar(255) NOT NULL,
-  `file` varchar(255) NOT NULL,
-  `calon_pembimbing` varchar(30) NOT NULL,
+  `metode` varchar(50) NOT NULL,
+  `doc_proposal` varchar(255) NOT NULL,
+  `calon_pembimbing_1` varchar(30) NOT NULL,
+  `calon_pembimbing_2` text NOT NULL,
   `syarat_review` text NOT NULL,
   `tanggal_upload` datetime NOT NULL,
   `tanggal_upload_update` datetime NOT NULL,
-  `riviewer_1` varchar(30) NOT NULL,
+  `reviewer_1` varchar(30) NOT NULL,
   `komentar_1` text NOT NULL,
   `nilai_1` int(11) NOT NULL,
   `tanggal_menilai_1` datetime NOT NULL,
   `tanggal_update_menilai_1` datetime NOT NULL,
-  `riviewer_2` varchar(30) NOT NULL,
+  `reviewer_2` varchar(30) NOT NULL,
   `komentar_2` text NOT NULL,
   `nilai_2` int(100) NOT NULL,
   `tanggal_menilai_2` datetime NOT NULL,
@@ -112,6 +115,14 @@ CREATE TABLE `pengajuan` (
   `hasil` enum('lulus','tidak_lulus') NOT NULL,
   `tanggal_m_hasil` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pengajuan`
+--
+
+INSERT INTO `pengajuan` (`id_pengajuan`, `kode_pengajuan`, `nim`, `judul`, `metode`, `doc_proposal`, `calon_pembimbing_1`, `calon_pembimbing_2`, `syarat_review`, `tanggal_upload`, `tanggal_upload_update`, `reviewer_1`, `komentar_1`, `nilai_1`, `tanggal_menilai_1`, `tanggal_update_menilai_1`, `reviewer_2`, `komentar_2`, `nilai_2`, `tanggal_menilai_2`, `tanggal_update_menilai_2`, `hasil`, `tanggal_m_hasil`) VALUES
+(40, 'kd-pengajuan-0', 11451105873, 'sistem pendeteksi penyakit mata dengan metode bpnn', 'bpnn', '05b659ddaf74b7bee9a72064eae5fb041.jpg', '1111111111111', '1230120380', '[\"ccf2853d2620784120e7b5a151a5c1471.jpg\",\"c97899dd0ee469c4bcd323164814bdcd1.jpg\",\"1da0d1b95732f51bc61fb6bcf25fab2a1.jpg\"]', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0', '0', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0', '0', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00'),
+(41, 'kd-pengajuan-1', 11451105873, 'ads', 'bpnn', 'd5e37f4c490d3254a68d1029d9ee1d95abdi.jpg', '1111111111111', '1111111111111', '[\"bfb5e2345ef084dcbcf49b30f254cbc61.jpg\",\"21070dfd8683d86a4461d23e0ee0dd68abdi_ekualisasi.jpg\",\"3b565cacb3b2810f25d741ab98548a8aabdi_hapusaraskeabuan.jpg\"]', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0', '0', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0', '0', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -135,7 +146,7 @@ CREATE TABLE `pengguna` (
 INSERT INTO `pengguna` (`id_pengguna`, `nip_nim`, `nama`, `password`, `foto`, `hak_akses`) VALUES
 (1, '1', 'ahmad fauzi rahmaneeeeeeeeeeee', 'c4ca4238a0b923820dcc509a6f75849b', '1442659371859.jpg', 'administrator'),
 (2, '2', 'ahmad fauzi rahmaneee', 'c81e728d9d4c2f636f067f89cc14862c', '1442659371859.jpg', 'dosen'),
-(3, '3', 'Si Fulan', 'eccbc87e4b5ce2fe28308fd9f2a7baf3', '1442659371859.jpg', 'mahasiswa'),
+(3, '11451105873', 'Si Fulan', 'eccbc87e4b5ce2fe28308fd9f2a7baf3', '1442659371859.jpg', 'mahasiswa'),
 (4, '4', 'si fulan', 'a87ff679a2f3e71d9181a67b7542122c', '1442659371859.jpg', 'kordinatorTA');
 
 -- --------------------------------------------------------
@@ -200,7 +211,7 @@ ALTER TABLE `syarat`
 -- AUTO_INCREMENT for table `pengajuan`
 --
 ALTER TABLE `pengajuan`
-  MODIFY `id_pengajuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_pengajuan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `pengguna`
 --

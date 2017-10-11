@@ -3,11 +3,10 @@
 class PengajuanController extends \Phalcon\Mvc\Controller
 {
     public function indexAction()
-    {	   
+    {
         $data = Syarat::find([
             'order' => 'id'
         ]);
-
         $dosen = Dosen::find([
            'order' => 'nip ASC'
         ]);
@@ -17,44 +16,75 @@ class PengajuanController extends \Phalcon\Mvc\Controller
         $this->view->data = $array;
         $this->view->dosen = $dosen;
     }
+    public function Get_detail_pembimbing()
+    {
+        $dosen = Dosen::find([
+            'order' => 'nip ASC'
+        ]);
+    }
     public function PengajuansyaratAction() {
-        if($uploads = $this->request->getUploadedFiles()){
-            $names = [];
-            foreach($uploads as $upload){
-                $name = md5(uniqid(rand(), true)).strtolower($upload->getname());
-                $path = 'img/syarat_review/'.$name;
-                ($upload->moveTo($path)) ? $isUploaded = true : $isUploaded = false;
-                array_push($names, $name);
-            }
-        }else{
-            $this->flashSession->error('Persyaratan yang anda masukkan tidak lengkap');
+
+        if ($ses_nip_nim != $inp_nim) {
+            $this->flashSession->error('Pengajuan Gagal : Anda tidak bisa mewakilkan pengajuan orang lain');
             return $this->response->redirect('Pengajuan');
         }
-        $names = json_encode($names);
-
-        if (Pengajuan::count() == 0 ) {
-            $value = 'kd_pengajuan-0';
-        }
-        elseif (Pengajuan::count() != 0 ) {
-            $max_kd_pengajuan = Pengajuan::maximum(
-            [
-                'column' => 'kode_pengajuan'
-            ]);
-            $value_kd_pengajuan = explode("kd-pengajuan-" , $max_kd_pengajuan);
-            foreach ($value_kd_pengajuan as $value) {
-                $value++;
+        else{
+            if($uploads = $this->request->getUploadedFiles()){
+                $syarat_review = [];
+                $pengajuan = [];
+                // membuat direktori
+                if ((is_dir('docs_ta/pengajuan/'.$ses_nip_nim))) {
+                }
+                else {
+                    mkdir('docs_ta/pengajuan/'.$ses_nip_nim.'/', 0777);
+                }
+                // ambil nama file dan memindahkan file
+                foreach($uploads as $upload){
+                    $name = md5(uniqid(rand(), true)).strtolower($upload->getname());
+                    $path_pengajuan = 'docs_ta/pengajuan/'.$ses_nip_nim.'/'.$name;
+                    ($upload->moveTo($path_pengajuan)) ? $isUploaded = true : $isUploaded = false;
+                    array_push($pengajuan, $name);
+                }
+            }else{
+                $this->flashSession->error('Persyaratan yang anda masukkan tidak lengkap');
+                return $this->response->redirect('Pengajuan');
             }
-        }
-        $kd_pengajuan = 'kd-pengajuan-'.intval($value);
-        $pengajuan = new Pengajuan();
-        $pengajuan->kode_pengajuan = strval($kd_pengajuan) ;
-        $pengajuan->judul = $this->request->getPost('judul');
-        $pengajuan->calon_pembimbing = $this->request->getPost('calon_pembimbing');
-        $pengajuan->syarat_review = $names;
-        
-        if ($pengajuan->save()) {
-            $this->flashSession->success('Pengajuan Berhasil');
-            return $this->response->redirect('Pengajuan');   
+            $doc_proposal = $pengajuan[0];
+            foreach ($pengajuan as $value) {
+                if ($value != $pengajuan[0]) {
+                    array_push($syarat_review, $value);
+                }
+            }
+            //membuat kode pengajuan
+            if (Pengajuan::count() == 0 ) {
+                $value = 'kd_pengajuan-0';
+            }
+            elseif (Pengajuan::count() != 0 ) {
+                $max_kd_pengajuan = Pengajuan::maximum(
+                [
+                    'column' => 'kode_pengajuan'
+                ]);
+                $value_kd_pengajuan = explode("kd-pengajuan-" , $max_kd_pengajuan);
+                foreach ($value_kd_pengajuan as $value) {
+                    $value++;
+                }
+            }
+            $kd_pengajuan = 'kd-pengajuan-'.intval($value);
+            $pengajuan = new Pengajuan();
+            //save to db
+            $pengajuan->kode_pengajuan = strval($kd_pengajuan);
+            $pengajuan->nim = $this->request->getPost('nim');
+            $pengajuan->judul = $this->request->getPost('judul');
+            $pengajuan->metode = $this->request->getPost('metode');
+            $pengajuan->doc_proposal = $doc_proposal;
+            $pengajuan->calon_pembimbing_1 = $this->request->getPost('calon_pembimbing_1');
+            $pengajuan->calon_pembimbing_2 = $this->request->getPost('calon_pembimbing_2');
+            $pengajuan->syarat_review = json_encode($syarat_review);
+            
+            if ($pengajuan->save()) {
+                $this->flashSession->success('Pengajuan Berhasil');
+                return $this->response->redirect('Pengajuan');   
+            }
         }
 
 

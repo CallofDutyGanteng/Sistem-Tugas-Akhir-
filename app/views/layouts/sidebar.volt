@@ -1,59 +1,72 @@
-<div class="navbar-default sidebar" role="navigation">
-    <div class="sidebar-nav navbar-collapse">
-        <ul class="nav" id="side-menu">
-            {{ image('img/e-mahasiswa.png', 'width':'200' ,'heigth' : '160' ,'class' : 'offsside') }}
-            <li class="sidebar-search">
-                <div class="input-group custom-search-form">
-                    {#{{ image('/img/'~session.foto, 'width':'100%' ,'class':'img-circle') }}#} {#
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="img/sidebar-4.jpg">
 
-                    <div class="" style="text-align: center">{{ session.hak_akses }}</div>#}
-                </div>
-                <!-- /input-group -->
-            </li>
-            {% if session.hak_akses == 'administrator' %}
-                <li>
-                    {{ link_to('guide',' Home','class':'fa fa-home') }}
+        <div class="logo">
+            <a href="{{ url('guide') }}" class="simple-text">
+                <span class="text-primary">Tugas Akhir</span>
+            </a>
+        </div>
+        <div class="sidebar-wrapper">
+            <ul class="nav">
+                <li class="active">
+                    <a href="{{ url('guide') }}">
+                        <i class="pe-7s-home"></i>
+                        <p>Dashboard</p>
+                    </a>
                 </li>
+                {% if session.hak_akses == "administrator" %}
                 <li>
-                    {{ link_to('pengguna',' Pengguna','class':'fa fa-user') }}
+                    <a href="{{ url('pengguna') }}">
+                        <i class="pe-7s-users"></i>
+                        <p>Pengguna</p>
+                    </a>
                 </li>
+                {% elseif session.hak_akses == "dosen" %}
+                    <li>
+                        <a href="">
+                            <i class="pe-7s-users"></i>
+                            <p>Bimbingan Ku</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="pe-7s-users"></i>
+                            <p>Riviwer Ku</p>
+                        </a>
+                    </li>
+                {% elseif session.hak_akses == "mahasiswa" %}
                 <li>
-                    {{ link_to('setting',' Settings' , 'class' : 'fa fa-gear') }}
+                    <a href="{{ url('pengajuan') }}">
+                        <i class="pe-7s-users"></i>
+                        <p>Pengajuan</p>
+                    </a>
                 </li>
-            {% elseif session.hak_akses == 'dosen'%}
+                {% elseif session.hak_akses == "kordinatorTA" %}
                     <li>
-                        {{ link_to('profil',' Profil' , 'class' : 'fa fa-user') }}
+                        <a href="{{ url('mahasiswa') }}">
+                            <i class="pe-7s-users"></i>
+                            <p>Data Mahasiswa</p>
+                        </a>
                     </li>
                     <li>
-                        {{ link_to('proposal',' Syarat Proposal' , 'class' : 'fa fa-map') }}
+                        <a href="{{ url('dosen') }}">
+                            <i class="pe-7s-users"></i>
+                            <p>Data Dosen</p>
+                        </a>
                     </li>
                     <li>
-                        {{ link_to('mahasiswa',' Bimbingan Ku','class' : 'fa fa-user') }}
+                        <a href="{{ url('pengajuan') }}">
+                            <i class="pe-7s-file"></i>
+                            <p>Data Pengajaun</p>
+                        </a>
                     </li>
-                    <li>
-                        {{ link_to('mahasiswa',' Reivew Ku','class' : 'fa fa-user') }}
-                    </li>
-                {% elseif session.hak_akses == 'mahasiswa' %}
-                    <li>
-                        {{ link_to('pengajuan',' Pengajuan' , 'class' : 'fa fa-map') }}
-                    </li>
-                    {% elseif session.hak_akses == 'kordinatorTA' %}
-                    <li>
-                        {{ link_to('guide',' Home','class':'fa fa-home') }}
-                    </li>
-                    <li>
-                        {{ link_to('mahasiswa',' Mahasiswa','class':'fa fa-user') }}
-                    </li>
-                    <li>
-                        {{ link_to('dosen',' Dosen' , 'class' : 'fa fa-user-plus') }}
-                    </li>
-                    <li>
-                        {{ link_to('syarat',' Syarat Tugas Akhir' , 'class' : 'fa fa-file') }}
-                    </li>
-                    {% endif %}
-
-        </ul>
+                {% endif %}
+                <li class="active-pro ">
+                    <a href="keluar">
+                        <i class="pe-7s-rocket "></i>
+                        <p class="text-primary">Logout</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <!-- /.sidebar-collapse -->
-</div>
-<!-- /.navbar-static-side -->

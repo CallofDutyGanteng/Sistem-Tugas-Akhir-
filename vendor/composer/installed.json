@@ -1,0 +1,58 @@
+[
+    {
+        "name": "kirimemail/phalcon-datatables",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kirimemail/phalcon-datatable.git",
+            "reference": "271e18939773f6373d57c87178b3932203cd13d0"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kirimemail/phalcon-datatable/zipball/271e18939773f6373d57c87178b3932203cd13d0",
+            "reference": "271e18939773f6373d57c87178b3932203cd13d0",
+            "shasum": ""
+        },
+        "require": {
+            "ext-phalcon": "^3.0.0"
+        },
+        "require-dev": {
+            "fzaninotto/faker": "1.5.*@dev",
+            "kahlan/kahlan": "^3.1"
+        },
+        "time": "2017-10-03 03:19:36",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev_master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "DataTables\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Gamal Abdul Nasser",
+                "email": "gamalan@kirim.email"
+            },
+            {
+                "name": "Bagus Setiawan",
+                "email": "bagus@kirim.email"
+            }
+        ],
+        "description": "A DataTables adapter for Phalcon Framework",
+        "keywords": [
+            "datatables",
+            "phalcon",
+            "plugin"
+        ]
+    }
+]

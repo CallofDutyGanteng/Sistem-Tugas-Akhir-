@@ -1,3 +1,6 @@
+<?php if ($this->session->has('nip_nim')) { ?>
+    <?php $this->response->redirect(''); ?>
+<?php } else { ?>
 <html>
     <head>
         <title>Login</title>
@@ -35,3 +38,4 @@
     </div>
     </body>
 </html>
+<?php } ?>

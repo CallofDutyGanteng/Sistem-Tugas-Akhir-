@@ -1,8 +1,13 @@
 <div class="row">
   <div class="col-md-12">
-    <div class="page-header">
-      <a href="" data-toggle="modal" data-target="#modalTambah"><span class="btn btn-primary"> Tambah Data Mahasiswa</span></a>
+      <h1 class="page-header"><i class="fa fa-group fa-fw"></i> Mahasiswa Jurusan Teknik Informatika</h1>
+    <div class="col-lg-12">
+      <ol class="breadcrumb">
+        <li><a href="guide"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a></li>
+        <li><a href="mahasiswa"><i class="fa fa-user-secret fa-fw"></i> Data Mahasiswa</a></li>
+      </ol>
     </div>
+
   </div>
 </div>
 <?php $this->flashSession->output(); ?>
@@ -115,7 +120,11 @@
 </div>
 
 <!-- List Data Mahasiswa -->
-
+<div class="panel panel-default">
+  <div class="panel panel-heading">
+    <a href="" data-toggle="modal" data-target="#modalTambah"><span class="btn btn-primary fa fa-plus-circle btn-lg"> Tambah Data Mahasiswa</span></a>
+  </div>
+<div class="panel-body">
 <div class="table-responsive">
   <table class="table table-hover">
     <thead>
@@ -145,5 +154,7 @@
         <?php } ?>
       </tbody>
     </table>
-    <?php  echo count($data)  ?>
+    <?php echo count($data)  ?>
   </div>
+</div>
+</div>

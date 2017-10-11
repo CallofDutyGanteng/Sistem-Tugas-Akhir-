@@ -11,14 +11,8 @@ return new \Phalcon\Config([
         'host'        => 'localhost',
         'username'    => 'root',
         'password'    => '',
-         'dbname'      => 'db_sistemTA',
+         'dbname'      => 'db_sistemta',
         'charset'     => 'utf8',
-        'adapter' => 'Mysql',
-        'host' => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'dbname' => 'db_sistemta',
-        'charset' => 'utf8',
 
     ],
     'application' => [
