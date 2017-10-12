@@ -4,16 +4,26 @@ class PengajuanController extends \Phalcon\Mvc\Controller
 {
     public function indexAction()
     {
-        $data = Syarat::find([
+        $ses_nip_nim = $this->session->get('nip_nim');
+        $pengajuan = Pengajuan::findFirstByNim($ses_nip_nim);
+        $data_pengajuan = $pengajuan->nim;
+        $this->view->data_pengajuan = $data_pengajuan;
+        if ($pengajuan) {
+            $this->view->pengajuan = 'true';
+        }
+        else {
+            $this->view->pengajuan = 'false';
+        }
+        $syarat = Syarat::find([
             'order' => 'id'
         ]);
         $dosen = Dosen::find([
            'order' => 'nip ASC'
         ]);
-        $array = $data[0]->syarat;
+        $array = $syarat[0]->syarat;
         $array = preg_replace("(\[|\]|')", "", $array);
         $array = explode(",", $array);
-        $this->view->data = $array;
+        $this->view->syarat = $array;
         $this->view->dosen = $dosen;
     }
     public function Get_detail_pembimbing()
