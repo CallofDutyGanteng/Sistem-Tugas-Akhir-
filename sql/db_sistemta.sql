@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 16 Okt 2017 pada 07.03
+-- Generation Time: 16 Okt 2017 pada 13.16
 -- Versi Server: 10.1.9-MariaDB
 -- PHP Version: 7.0.1
 
@@ -157,7 +157,7 @@ CREATE TABLE `pengajuan` (
 
 INSERT INTO `pengajuan` (`id_pengajuan`, `kode_pengajuan`, `nim`, `judul`, `metode`, `doc_proposal`, `calon_pembimbing_1`, `calon_pembimbing_2`, `syarat_review`, `tanggal_upload`, `tanggal_upload_update`, `reviewer_1`, `komentar_1`, `nilai_1`, `tanggal_menilai_1`, `tanggal_update_menilai_1`, `reviewer_2`, `komentar_2`, `nilai_2`, `tanggal_menilai_2`, `tanggal_update_menilai_2`, `hasil`, `tanggal_m_hasil`, `status`) VALUES
 (51, 'kd-pengajuan-0', 11451105873, 'sistem pakar kambing guling kapok dek taek bana', 'bpnn', '6832489d4d93fde2a9636f10c877a5325.jpg', '1230120380', '12121', '["c75ba1fb05fa940aa2898c435dc2a49a5.jpg","3a8219386431fe9a9b7d34a311a6d0a420150722lnp5-nistsgn.jpg","8ed27214565875474a33f08e840e62b11.jpg"]', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '10', '0', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '11', '0', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '0000-00-00 00:00:00', 'proses_review'),
-(52, 'kd-pengajuan-1', 3, 'sistem pendeteksi penyakit jantung', 'backpropagation', 'd9720e6c722cf2244b113f7b87890d0dbackgoround.jpg', '12121', '2', '["1fa4cc26076fa4088596ad70d623f2a5backgoround.jpg","147ba5f1abce4bb5dd6e96736e3f0894backgoround.jpg","7f2122673cacb32e2097b8c05962cb61backgoround.jpg"]', '2017-10-15 00:00:00', '2017-10-15 00:00:00', '11', '0', 0, '2017-10-15 00:00:00', '0000-00-00 00:00:00', '1230120380', '0', 0, '2017-10-15 00:00:00', '2017-10-15 00:00:00', '', '2017-10-15 00:00:00', 'proses_review');
+(52, 'kd-pengajuan-1', 3, 'sistem pendeteksi penyakit jantung', 'backpropagation', 'd9720e6c722cf2244b113f7b87890d0dbackgoround.jpg', '12121', '2', '["1fa4cc26076fa4088596ad70d623f2a5backgoround.jpg","147ba5f1abce4bb5dd6e96736e3f0894backgoround.jpg","7f2122673cacb32e2097b8c05962cb61backgoround.jpg"]', '2017-10-15 00:00:00', '2017-10-15 00:00:00', '11', '0', 0, '2017-10-15 00:00:00', '0000-00-00 00:00:00', '1230120380', '0', 240, '2017-10-15 00:00:00', '2017-10-15 00:00:00', '', '2017-10-15 00:00:00', 'proses_review');
 
 -- --------------------------------------------------------
 
