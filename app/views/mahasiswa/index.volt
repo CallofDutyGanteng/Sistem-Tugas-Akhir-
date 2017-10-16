@@ -41,12 +41,7 @@
                             <input type="text" class="form-control" name="name" placeholder="Masukkan Nama">
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="department" required>Judul :</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control" name="department" placeholder="Judul Tugas Akhir">
-                        </div>
-                    </div>
+
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" id="add" class="btn btn-success">Add</button>
@@ -108,13 +103,7 @@
                                    placeholder="Masukkan Nama" required>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="department">Judul:</label>
-                        <div class="col-sm-8">
-                            <input type="text" class="form-control edit_department" id="department" name="department"
-                                   placeholder="Masukkan Judul Tugas Akhir" required>
-                        </div>
-                    </div>
+
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                             <button id="update" class="btn btn-primary" type="submit">Simpan</button>
@@ -141,39 +130,42 @@
             <table class="table table-hover" id="di">
                 <thead class="text-primary">
                 <tr>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Phone #</th>
+                    <th>#</th>
+                    <th>Nim</th>
+                    <th>Nama</th>
+                    <th>Aksi</th>
                 </tr>
                 </thead>
+            <tbody>
+            <div class="list_mahasiswa"></div>
+            {% set no = "#" %}
+            {% for d in data %}
 
+                <tr>
+                    <td>{{ no }}</td>
+                    <td>{{ d.nim }}</td>
+                    <td>{{ d.name }}</td>
+                    <td>
+                        <!--<a href="index/edit/{{ d.nim }}" class="btn btn-warning" role="button">Ubah</a>-->
+                        <a data-nim="{{ d.nim }}" data-nama="{{ d.name }}" data-depart="{{ d.department }}"
+                           class="btn btn-warning" id="editbtn" data-toggle="modal"
+                           data-target="#modalUbah">Ubah</a>
+                        <a href="" data-href="mahasiswa/delete/{{ d.nim }}" class="btn btn-danger"
+                           data-toggle="modal" data-target="#modalHapus">Hapus</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
                 <tfoot>
                 <tr>
-                    <th>First name</th>
-                    <th>Last name</th>
-                    <th>Phone #</th>
+                    <th>#</th>
+                    <th>Nim</th>
+                    <th>Nama</th>
+                    <th>Aksi </th>
 
                 </tr>
                 </tfoot>
-                {#<div class="list_mahasiswa"></div>#}
-                {#{% for d in data %}#}
 
-                    {#<tr>#}
-
-                        {#<td>{{ d.nim }}</td>#}
-                        {#<td>{{ d.name }}</td>#}
-                        {#<td>{{ d.department }}</td>#}
-                        {#<td>#}
-                            {#<!--<a href="index/edit/{{ d.nim }}" class="btn btn-warning" role="button">Ubah</a>-->#}
-                            {#<a data-nim="{{ d.nim }}" data-nama="{{ d.name }}" data-depart="{{ d.department }}"#}
-                               {#class="btn btn-warning" id="editbtn" data-toggle="modal"#}
-                               {#data-target="#modalUbah">Ubah</a>#}
-                            {#<a href="" data-href="mahasiswa/delete/{{ d.nim }}" class="btn btn-danger"#}
-                               {#data-toggle="modal" data-target="#modalHapus">Hapus</a>#}
-                        {#</td>#}
-                    {#</tr>#}
-                {#{% endfor %}#}
-                {#</tbody>#}
             </table>
         </div>
     </div>

@@ -49,22 +49,12 @@
 {{ javascript_include('js/material-dashboard.js') }}
 {#{{ javascript_include('js/flotdata.js') }}#}
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#di').DataTable({
-            processing :true,
-            serverSide: true,
-            dataType: "json",
-            ajax: {
-                url: '/mahasiswa/index',
-                method: 'POST'
-            },
-            columns: [
-                {data: "nim", searchable: false},
-                {data: "name"},
-                {data: "department"}
-            ]
+    $(document).ready(function(){
+        $("#klik").on("click",function(){
+            $("#panel").slideDown();
         });
     });
+
 </script>
 </body>
 </html>

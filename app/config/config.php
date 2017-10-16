@@ -10,7 +10,7 @@ return new \Phalcon\Config([
         'adapter'     => 'Mysql',
         'host'        => 'localhost',
         'username'    => 'root',
-        'password'    => '',
+        'password'    => 'rootreload',
          'dbname'      => 'db_sistemta',
         'charset'     => 'utf8',
 
@@ -33,4 +33,3 @@ return new \Phalcon\Config([
 
 
 ]);
-

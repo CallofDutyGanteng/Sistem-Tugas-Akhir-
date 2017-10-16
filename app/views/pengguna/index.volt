@@ -67,7 +67,8 @@
                                                                     </div>
                                                                     <div class="form-group">
                                                                         <label for="">Hak Akses</label>
-                                                                        <select name="hak_akses" id="hak_akses" class="form-control">
+                                                                        <select name="hak_akses" id="hak_akses"
+                                                                                class="form-control">
                                                                             <option {% if d.hak_akses == 'administrator' %}{{ 'selected' }}
                                                                                     value="administrator">Administrator
                                                                             </option>

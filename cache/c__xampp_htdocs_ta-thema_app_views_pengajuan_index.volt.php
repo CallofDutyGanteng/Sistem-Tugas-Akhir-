@@ -18,7 +18,11 @@
             <div class="card-content">
                 <?php if ($this->session->hak_akses == 'mahasiswa') { ?>
                     <?php if ($pengajuan == 'true') { ?>
-                        <?= $data_pengajuan ?>
+                        <h3><b>Status : </b>Pending . . .</h3>
+                        <h3><b>nim :</b><?= $data_pengajuan->nim ?></h3>
+                        <h3><b>judul :</b><?= $data_pengajuan->judul ?></h3>
+                        <h3><b>calon pembimbing 1 :</b><?= $data_pengajuan->calon_pembimbing_1 ?></h3>
+                        <h3><b>calon pembimbing 2 :</b><?= $data_pengajuan->calon_pembimbing_2 ?></h3>
                         
                     <?php } else { ?>
                         <div style="clear:both"></div>

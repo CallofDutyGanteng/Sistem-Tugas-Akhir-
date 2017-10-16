@@ -15,6 +15,7 @@
     <?= $this->tag->stylesheetLink('css/pe-icon-7-stroke.css') ?>
     <?= $this->tag->stylesheetLink(['rel' => 'icon', 'href' => 'img/favicon.png', 'type' => 'image/x-icon']) ?>
     <?= $this->tag->stylesheetLink('vendor/font-awesome/css/font-awesome.css') ?>
+    <?= $this->tag->javascriptInclude('js/jquery-3.2.1.min.js') ?>
 </head>
 <body>
 <?php if($this->session->has('nip_nim')) { ?>
@@ -110,33 +111,33 @@
                 <?= $this->getContent() ?>
             </div>
         </div>
-        <footer class="footer">
-    <div class="container-fluid">
-        <nav class="pull-left">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-home"></i>
-                        Dashborad
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="pe-7s-plane"></i>
-                        Teknik Informatika
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <p class="copyright pull-right">
-            &copy;
-            <script>
-                document.write(new Date().getFullYear())
-            </script>
-            <a href="http://www.creative-tim.com">Team COD</a>, Teknik Informatika - Uin Suska
-        </p>
-    </div>
-</footer>
+        
+    
+        
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+                    
+                        
+                        
+                    
+                
+            
+        
+        
+            
+            
+                
+            
+            
+        
+    
+
     </div>
     <?php } else { ?>
 
@@ -195,7 +196,7 @@
 </div>
 
 <!-- Latest compiled and minified JavaScript -->
-<?= $this->tag->javascriptInclude('js/jquery-3.2.1.min.js') ?>
+
 <?= $this->tag->javascriptInclude('js/bootstrap.min.js') ?>
 <?= $this->tag->javascriptInclude('js/jquery.dataTables.min.js') ?>
 <?= $this->tag->javascriptInclude('js/dataTables.buttons.min.js') ?>
@@ -204,25 +205,16 @@
 
 <?= $this->tag->javascriptInclude('js/demo.js') ?>
 <?= $this->tag->javascriptInclude('js/material.min.js') ?>
+<?= $this->tag->javascriptInclude('js/perfect-scrollbar.jquery.min.js') ?>
 <?= $this->tag->javascriptInclude('js/material-dashboard.js') ?>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('#di').DataTable({
-            processing :true,
-            serverSide: true,
-            dataType: "json",
-            ajax: {
-                url: '/mahasiswa/index',
-                method: 'POST'
-            },
-            columns: [
-                {data: "nim", searchable: false},
-                {data: "name"},
-                {data: "department"}
-            ]
+    $(document).ready(function(){
+        $("#klik").on("click",function(){
+            $("#panel").slideDown();
         });
     });
+
 </script>
 </body>
 </html>

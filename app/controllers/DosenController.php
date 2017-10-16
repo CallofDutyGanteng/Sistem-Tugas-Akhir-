@@ -1,11 +1,12 @@
 <?php
-class DosenController extends ControllerBase
+class DosenController extends \Phalcon\Mvc\Controller
 {
     public function indexAction(){
         $data = Dosen::find([
             'order' => 'nip'
         ]);
         $this->view->data = $data;
+
     }
 
     public function listAction(){

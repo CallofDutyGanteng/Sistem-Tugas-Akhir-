@@ -108,13 +108,16 @@
                         <td>{{ d.nama }}</td>
                         <td>{{ d.bidang }}</td>
                         <td>
-                            <a href="#" id="btnedit{{ d.nip }}" class="btn btn-primary">Edit</a>
+                            <a href="#" id="btnedit{{ d.nip }}" class="btnedit{{d.nip}} btn btn-primary">Edit</a>
                             <script type="text/javascript">
                                 $(document).ready(function () {
                                     $('#formedit{{ d.nip }}').hide();
                                     $('#btnedit{{ d.nip }}').click(function () {
                                         $('#formedit{{ d.nip }}').fadeToggle();
-                                    })
+                                        $('a.btnedit{{ d.nip }}').attr('class','a#btnedited{{d.nip}} btn btn-primary');
+                                    });
+
+                                    
                                 })
                             </script>
                             <a href="" data-href="dosen/delete/{{ d.nip }}" class="btn btn-danger" data-toggle="modal"

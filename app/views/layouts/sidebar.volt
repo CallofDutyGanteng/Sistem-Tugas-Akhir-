@@ -23,15 +23,15 @@
                 </li>
                 {% elseif session.hak_akses == "dosen" %}
                     <li>
-                        <a href="">
+                        <a href="{{ url('bimbinganku')}}">
                             <i class="pe-7s-users"></i>
                             <p>Bimbingan Ku</p>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ url('reviewku')}}">
                             <i class="pe-7s-users"></i>
-                            <p>Riviwer Ku</p>
+                            <p>Riview Ku</p>
                         </a>
                     </li>
                 {% elseif session.hak_akses == "mahasiswa" %}
@@ -55,9 +55,15 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ url('pengajuan') }}">
+                        <a href="{{ url('tunggu_review') }}">
                             <i class="pe-7s-file"></i>
-                            <p>Data Pengajaun</p>
+                            <p>Data Tunggu Review</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('proses_review') }}">
+                            <i class="pe-7s-file"></i>
+                            <p>Data Proses review</p>
                         </a>
                     </li>
                 {% endif %}

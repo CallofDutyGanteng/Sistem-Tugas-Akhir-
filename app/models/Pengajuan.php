@@ -10,154 +10,168 @@ class Pengajuan extends \Phalcon\Mvc\Model
      * @Identity
      * @Column(type="integer", length=11, nullable=false)
      */
-    public $id_pengajuan = 0;
+    public $id_pengajuan;
 
     /**
      *
      * @var string
      * @Column(type="string", length=50, nullable=true)
      */
-    public $kode_pengajuan = 0;
+    public $kode_pengajuan;
+
+    /**
+     *
+     * @var integer
+     * @Column(type="integer", length=12, nullable=false)
+     */
+    public $nim;
 
     /**
      *
      * @var string
      * @Column(type="string", length=255, nullable=false)
      */
-    public $judul = 0;
+    public $judul;
 
     /**
      *
      * @var string
      * @Column(type="string", length=50, nullable=false)
      */
-    public $metode = 0;
+    public $metode;
 
     /**
      *
      * @var string
      * @Column(type="string", length=255, nullable=false)
      */
-    public $doc_proposal = 0;
+    public $doc_proposal;
 
     /**
      *
      * @var string
      * @Column(type="string", length=30, nullable=false)
      */
-    public $calon_pembimbing_1 = 0;
+    public $calon_pembimbing_1;
 
     /**
      *
      * @var string
      * @Column(type="string", nullable=false)
      */
-    public $calon_pembimbing_2 = 0;
+    public $calon_pembimbing_2;
 
     /**
      *
      * @var string
      * @Column(type="string", nullable=false)
      */
-    public $syarat_review = 0;
+    public $syarat_review;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $tanggal_upload = 0;
+    public $tanggal_upload;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $tanggal_upload_update = 0;
+    public $tanggal_upload_update;
 
     /**
      *
      * @var string
-     * @Column(type="string", length=30, nullable=false)
+     * @Column(type="string", length=30, nullable=true)
      */
-    public $reviewer_1 = 0;
+    public $reviewer_1;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $komentar_1 = 0;
+    public $komentar_1;
 
     /**
      *
      * @var integer
-     * @Column(type="integer", length=11, nullable=false)
+     * @Column(type="integer", length=11, nullable=true)
      */
-    public $nilai_1 = 0;
+    public $nilai_1;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $tanggal_menilai_1 = 0;
+    public $tanggal_menilai_1;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $tanggal_update_menilai_1 = 0;
+    public $tanggal_update_menilai_1;
 
     /**
      *
      * @var string
-     * @Column(type="string", length=30, nullable=false)
+     * @Column(type="string", length=30, nullable=true)
      */
-    public $reviewer_2 = 0;
+    public $reviewer_2;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $komentar_2 = 0;
+    public $komentar_2;
 
     /**
      *
      * @var integer
-     * @Column(type="integer", length=100, nullable=false)
+     * @Column(type="integer", length=100, nullable=true)
      */
-    public $nilai_2 = 0;
+    public $nilai_2;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $tanggal_menilai_2 = 0;
+    public $tanggal_menilai_2;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $tanggal_update_menilai_2 = 0;
+    public $tanggal_update_menilai_2;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $hasil = 0;
+    public $hasil;
 
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @Column(type="string", nullable=true)
      */
-    public $tanggal_m_hasil = 0;
+    public $tanggal_m_hasil;
+
+    /**
+     *
+     * @var string
+     * @Column(type="string", nullable=true)
+     */
+    public $status;
 
     /**
      * Initialize method for model.
@@ -199,5 +213,4 @@ class Pengajuan extends \Phalcon\Mvc\Model
     {
         return parent::findFirst($parameters);
     }
-
 }

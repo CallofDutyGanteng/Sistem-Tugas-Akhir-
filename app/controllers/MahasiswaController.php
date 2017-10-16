@@ -9,11 +9,7 @@ class MahasiswaController extends \Phalcon\Mvc\Controller
             'order' => 'nim'
         ]);
         $this->view->data = $data;
-
-
     }
-
-
 
     public function listAction()
     {
@@ -28,7 +24,7 @@ class MahasiswaController extends \Phalcon\Mvc\Controller
         $resData = array();
 
         foreach ($data as $result) {
-            $resData[] = array("nim" => $result->nim, "name" => $result->name, "department" => $result->department);
+            $resData[] = array("nim" => $result->nim, "name" => $result->name);
         }
 
         $response->setContent(json_encode($resData));
@@ -59,7 +55,7 @@ class MahasiswaController extends \Phalcon\Mvc\Controller
 
         $success = $add->save(
             $this->request->getPost(),
-            array('nim','name', 'department')
+            array('nim','name')
         );
 
         if($success){
@@ -74,14 +70,6 @@ class MahasiswaController extends \Phalcon\Mvc\Controller
         }
     }
 
-    /*public function editAction($nim)
-    {
-      $mhs = Mahasiswa::findFirst($nim);
-
-   		$this->view->nim=$mhs->nim;
-   		$this->view->name=$mhs->name;
-   		$this->view->department=$mhs->department;
-    }*/
 
     public function updateAction()
     {
